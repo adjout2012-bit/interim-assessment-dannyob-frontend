@@ -1,0 +1,12 @@
+[build]
+  # The directory where Netlify runs your build command
+  command = "npm run build"
+  
+  # The directory that contains the deploy-ready HTML/assets
+  publish = "dist" # or "build" depending on your Vite/CRA setup
+
+[[redirects]]
+  # This fixes the React Router 404 issue
+  from = "/*"
+  to = "/index.html"
+  status = 200
